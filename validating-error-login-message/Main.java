@@ -26,7 +26,8 @@ public class Main {
         // logging in using id locator
         driver.findElement(By.id("Login")).click();
 
-        // getting error login message and printing to the console
-        System.out.println(driver.findElement(By.cssSelector("#error")).getText());
+        // getting error login message by customized XPath and printing to the console
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"error\"]")).getText());
     }
 }
+
