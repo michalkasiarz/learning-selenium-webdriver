@@ -13,7 +13,13 @@ public class Main {
         // hitting mail.google.com login URL
         driver.get("https://mail.google.com");
 
+        // locating button with xpath
         driver.findElement(By.xpath("//*[@id=\"view_container\"]/div/div/div[2]/div/div[1]/div/form/content/section/div/content/div[3]/button")).click();
+
+        // locating input button with customized xpath and entering email
+        driver.findElement(By.xpath("//input[contains(@name,\"identifier\")]")).sendKeys("my_email");
+
+
     }
 }
 
